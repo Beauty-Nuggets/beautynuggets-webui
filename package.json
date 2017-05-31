@@ -2,8 +2,9 @@
   "name": "beautynuggets-webui",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "src/index.tsx",
   "scripts": {
+    "dev": "webpack && webpack-dev-server --content-base . --hot --inline --colors --port 3000 --open",
     "test": "jest --watch --coverage",
     "webpack": "webpack"
   },
@@ -36,7 +37,9 @@
     "react-addons-test-utils": "^15.5.1",
     "source-map-loader": "^0.2.1",
     "ts-jest": "^20.0.4",
-    "typescript": "^2.3.2"
+    "typescript": "^2.3.2",
+    "webpack": "^2.6.1",
+    "webpack-dev-server": "^2.4.5"
   },
   "jest": {
     "setupFiles": [
