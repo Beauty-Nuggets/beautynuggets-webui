@@ -1,7 +1,11 @@
+const webpack = require('webpack')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
+
+
 module.exports = {
     entry: "./src/index.tsx",
     output: {
-        filename: "bundle.js",
+        filename: "[name].[hash].js",
         path: __dirname + "/dist"
     },
 
@@ -26,8 +30,20 @@ module.exports = {
     // assume a corresponding global variable exists and use that instead.
     // This is important because it allows us to avoid bundling all of our
     // dependencies, which allows browsers to cache those libraries between builds.
-    externals: {
-        "react": "React",
-        "react-dom": "ReactDOM"
-    }
+    // externals: {
+    //     "react": "React",
+    //     "react-dom": "ReactDOM"
+    // },
+
+    plugins: [
+        new HtmlWebpackPlugin({
+            template: __dirname + "/src/index.html",
+            hash: true,
+            filename: "index.html",
+            inject: "body"
+        }),
+        new webpack.ProvidePlugin({
+            "React": "react",
+        })
+    ]
 }
