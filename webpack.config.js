@@ -1,4 +1,3 @@
-const webpack = require('webpack')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 
@@ -41,9 +40,6 @@ module.exports = {
             hash: true,
             filename: "index.html",
             inject: "body"
-        }),
-        new webpack.ProvidePlugin({
-            "React": "react",
         })
     ]
 }
