@@ -1,5 +1,5 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin')
-
+const path = require('path');
 
 module.exports = {
     entry: "./src/index.tsx",
@@ -13,7 +13,10 @@ module.exports = {
 
     resolve: {
         // Add '.ts' and '.tsx' as resolvable extensions.
-        extensions: [".ts", ".tsx", ".js", ".json"]
+        extensions: [".ts", ".tsx", ".js", ".json"],
+        alias: {
+            'material-ui$': path.resolve(__dirname, 'node_modules/material-ui')
+        }
     },
 
     module: {
