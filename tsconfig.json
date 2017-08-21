@@ -3,11 +3,17 @@
         "outDir": "./dist/",
         "sourceMap": true,
         "noImplicitAny": false,
-        "module": "commonjs",
-        "target": "es5",
+        "module": "es6",
+        "target": "es6",
         "jsx": "react",
         "allowSyntheticDefaultImports": true,
-        "typeRoots": ["./node_modules/types"]
+        "typeRoots": ["./node_modules/@types"],
+        "moduleResolution": "node",
+        "baseUrl": ".", 
+        "paths": {
+            "components/*": ["./src/components/*"],
+            "material-ui/*": ["./node_modules/material-ui/*"]
+        }
     },
     "include": [
         "./src/**/*"

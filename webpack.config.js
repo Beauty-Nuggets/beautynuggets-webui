@@ -15,6 +15,7 @@ module.exports = {
         // Add '.ts' and '.tsx' as resolvable extensions.
         extensions: [".ts", ".tsx", ".js", ".json"],
         alias: {
+            'components$': path.resolve('src/components'),
             'material-ui$': path.resolve(__dirname, 'node_modules/material-ui')
         }
     },
