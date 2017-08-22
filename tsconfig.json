@@ -5,15 +5,23 @@
         "noImplicitAny": false,
         "module": "es6",
         "target": "es6",
+        "moduleResolution": "node",
         "jsx": "react",
         "allowSyntheticDefaultImports": true,
         "typeRoots": ["./node_modules/@types"],
-        "moduleResolution": "node",
+        "noUnusedLocals": true,
+        "noUnusedParameters": true,
         "baseUrl": ".", 
         "paths": {
             "components/*": ["./src/components/*"],
             "material-ui/*": ["./node_modules/material-ui/*"]
-        }
+        },
+        "lib": [
+          "ES6",
+          "ES2016",
+          "ES2015.Iterable",
+          "DOM"
+        ]
     },
     "include": [
         "./src/**/*"
