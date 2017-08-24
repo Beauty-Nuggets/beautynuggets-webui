@@ -4,7 +4,7 @@
     "description": "",
     "main": "src/index.tsx",
     "scripts": {
-        "dev": "webpack-dev-server --content-base ./dist/index.html --hot --inline --colors --port 3000 --open",
+        "dev": "webpack-dev-server --content-base ./dist/index.html --hot --inline --colors --open",
         "test": "jest --watch --coverage",
         "webpack": "webpack"
     },
@@ -55,7 +55,7 @@
         "transform": {
             ".(ts|tsx)": "<rootDir>/node_modules/ts-jest/preprocessor.js"
         },
-        "testRegex": "(/__tests__/.*|\\.(test|spec))\\.(ts|tsx|js)$",
+        "testRegex": "(/__tests__/.*|\\.(spec))\\.(ts|tsx|js)$",
         "moduleFileExtensions": [
             "ts",
             "tsx",

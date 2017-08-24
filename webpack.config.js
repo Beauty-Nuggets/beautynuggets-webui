@@ -3,6 +3,7 @@ const path = require('path');
 
 module.exports = {
     entry: "./src/index.tsx",
+    
     output: {
         filename: "[name].[hash].js",
         path: __dirname + "/dist"
@@ -45,5 +46,9 @@ module.exports = {
             filename: "index.html",
             inject: "body"
         })
-    ]
+    ],
+    
+    devServer: {
+        port: 8080
+    }
 }
